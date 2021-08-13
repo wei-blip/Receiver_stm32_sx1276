@@ -1,0 +1,16 @@
+core_cm3.h:1762:34:__NVIC_SystemReset	4	static,ignoring_inline_asm
+board.c:103:6:BoardCriticalSectionBegin	24	static,ignoring_inline_asm
+board.c:109:6:BoardCriticalSectionEnd	24	static,ignoring_inline_asm
+board.c:114:6:BoardInitPeriph	4	static
+board.c:119:6:BoardInitMcu	8	static
+board.c:130:6:BoardResetMcu	16	static
+board.c:138:6:BoardDeInitMcu	4	static
+board.c:143:10:BoardGetRandomSeed	4	static
+board.c:148:6:BoardGetUniqueId	16	static
+board.c:216:10:BoardGetBatteryVoltage	4	static
+board.c:221:9:BoardGetBatteryLevel	16	static
+board.c:266:13:BoardUnusedIoInit	8	static
+board.c:277:6:LpmEnterStopMode	16	static
+board.c:304:6:LpmExitStopMode	16	static
+board.c:320:6:LpmEnterSleepMode	8	static
+board.c:325:6:BoardLowPowerHandler	8	static,ignoring_inline_asm

@@ -1,0 +1,16 @@
+timer.c:86:6:TimerInit	16	static
+timer.c:97:6:TimerSetContext	16	static
+timer.c:102:6:TimerStart	24	static
+timer.c:141:13:TimerInsertTimer	24	static
+timer.c:164:13:TimerInsertNewHeadTimer	24	static
+timer.c:178:6:TimerIsStarted	16	static
+timer.c:183:6:TimerIrqHandler	40	static
+timer.c:235:6:TimerStop	32	static
+timer.c:307:13:TimerExists	24	static
+timer.c:322:6:TimerReset	16	static
+timer.c:328:6:TimerSetValue	24	static
+timer.c:346:13:TimerGetCurrentTime	16	static
+timer.c:352:13:TimerGetElapsedTime	24	static
+timer.c:365:13:TimerSetTimeout	32	static
+timer.c:378:13:TimerTempCompensation	16	static
+timer.c:383:6:TimerProcess	8	static

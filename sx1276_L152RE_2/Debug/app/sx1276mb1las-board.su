@@ -1,0 +1,17 @@
+sx1276mb1las-board.c:80:6:SX1276IoInit	4	static
+sx1276mb1las-board.c:102:6:SX1276IoIrqInit	16	static
+sx1276mb1las-board.c:112:6:SX1276IoDeInit	4	static
+sx1276mb1las-board.c:122:6:SX1276IoDbgInit	4	static
+sx1276mb1las-board.c:130:6:SX1276IoTcxoInit	4	static
+sx1276mb1las-board.c:135:6:SX1276SetBoardTcxo	16	static
+sx1276mb1las-board.c:140:10:SX1276GetBoardTcxoWakeupTime	4	static
+sx1276mb1las-board.c:145:6:SX1276Reset	8	static
+sx1276mb1las-board.c:163:6:SX1276SetRfTxPower	32	static
+sx1276mb1las-board.c:231:16:SX1276GetPaSelect	16	static
+sx1276mb1las-board.c:243:6:SX1276SetAntSwLowPower	16	static
+sx1276mb1las-board.c:260:6:SX1276AntSwInit	4	static
+sx1276mb1las-board.c:265:6:SX1276AntSwDeInit	4	static
+sx1276mb1las-board.c:270:6:SX1276SetAntSw	16	static
+sx1276mb1las-board.c:274:6:SX1276CheckRfFrequency	16	static
+sx1276mb1las-board.c:280:10:SX1276GetDio1PinState	8	static
+sx1276mb1las-board.c:285:6:HAL_GPIO_EXTI_Callback	24	static

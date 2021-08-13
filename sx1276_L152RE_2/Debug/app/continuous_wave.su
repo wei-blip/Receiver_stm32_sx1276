@@ -1,0 +1,4 @@
+continuous_wave.c:18:6:OnLed1TimerEvent	16	static
+continuous_wave.c:26:6:OnLed2TimerEvent	16	static
+continuous_wave.c:34:6:OnRadioTxTimeout	8	static
+continuous_wave.c:43:6:continuos_wave	8	static
