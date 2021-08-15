@@ -97,6 +97,15 @@
 
 #endif
 
+#define PER_TEST
+
+#ifdef PER_TEST
+
+#define NUMBER_OF_PACKETS_SENT 	20
+#define AVERAGE_TIME			620 // записывается по результатам расчета на передающей стороне
+
+#endif
+
 void init_rf (void);
 void ping_pong_rf (void);
 

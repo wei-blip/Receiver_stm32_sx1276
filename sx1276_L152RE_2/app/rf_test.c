@@ -9,19 +9,29 @@
 
 // #define RTC_TEST
 // #define TX_TEST
-#define UART_TEST
 
 #ifdef UART_TEST
+
 static uint8_t data_UART[] = {0x00, 0x00, 0x00, 0x00};
-static uint8_t data_Tx[] = {0x00, 0x00, 0x00, 0x00};
-static uint32_t prevSend = 0;
-static uint32_t Error = 0;
-uint32_t prevTick = 0;
-uint32_t AverageTime = 0;
-static uint32_t full_data_UART = 0;
-static uint32_t count = 0;
+static uint8_t data_Tx[] = {0x00, 0x00, 0x00, 0x00}; // это для теста uart
+static uint32_t full_data_UART = 0; // это для теста uart
 static char  str_to_send [128] = {0};
+
 extern QueueHandle_t xQueueUartData;
+
+#endif
+
+#ifdef PER_TEST
+
+uint8_t data_UART[] = {0x00, 0x00, 0x00, 0x00};
+
+static char  str_to_send [128] = {0};
+
+static uint32_t prevSend = 0;
+static uint32_t prevTick = 0;
+
+extern QueueHandle_t xQueueUartData;
+
 #endif
 
 const uint8_t PingMsg[] = "PING";
@@ -274,6 +284,7 @@ void OnTxDone( void )
 
 void OnRxDone( uint8_t *payload, uint16_t size, int16_t rssi, int8_t snr )
 {
+	static uint32_t Error;
 	uint32_t Tick = HAL_GetTick();
 	uint32_t dTick = 0;
 	HAL_GPIO_TogglePin(LED_EXT_GPIO_Port, LED_EXT_Pin);
@@ -284,22 +295,45 @@ void OnRxDone( uint8_t *payload, uint16_t size, int16_t rssi, int8_t snr )
     SnrValue = snr;
     State = RX;
 #ifdef UART_TEST
-    memcpy( data_UART, payload, sizeof(data_UART)/sizeof(uint8_t) );
+    memcpy( data_UART, payload, sizeof(data_UART) );
     if ( xQueueSendToBackFromISR( xQueueUartData,  &data_UART, pdFALSE ) != pdPASS) {
-    	printf("Failed to post the message");
+    	printf( "Failed to post the message" );
     }
-    Error += prevSend - *( uint32_t* )data_UART - 1;
-    if (!prevSend) {
-    	prevTick = Tick;
+#endif
+
+#ifdef PER_TEST
+    memcpy( data_UART, payload, sizeof(data_UART) );
+    if ( !prevTick ) {
+    	prevTick = Tick;  /* фиксируем время начала приёма */
     }
     else {
     	dTick = Tick - prevTick; // находим разницу времени между двумя принятыми посылками
     	prevTick = Tick;
     }
-    prevSend = *( uint32_t* )data_UART;
+    if ( dTick > AVERAGE_TIME ) {
+    	if ( *( uint32_t* )data_UART < prevSend ) {
+    		if ( !( ( *( uint32_t* )data_UART == 0 ) && ( prevSend == ( NUMBER_OF_PACKETS_SENT - 1 ) ) ) ) {
+        		Error += (NUMBER_OF_PACKETS_SENT - prevSend) - 1;	/* если произошла потеря и начался следующий период передачи
+        		то находим сколько пакетов было потеряно между концом предыдущего периода и началом следующего
+        		Отнимаем один потому что считаем от 0
+        	 */
+    		}
+    	}
+    	/* Отправляем итоговую ошибку в очередь для вывода в терминал*/
+        if ( xQueueSendToBackFromISR( xQueueUartData,  &Error, pdFALSE ) != pdPASS) {
+        	printf( "Failed to post the message" );
+        }
 
-    count++;
-    if( count == 999999 ) count = 0;
+        if ( *( uint32_t* )data_UART < prevSend ) {
+        	Error = *( uint32_t* )data_UART; /* если с начала приёма следующего периода были потеряны
+        	пакеты то находим их количество*/
+        }
+    }
+    else {
+    	Error += *( uint32_t* )data_UART - prevSend - 1; /* если время текущего периода ещё не вышло то
+    	находим число потерянных пакетов, если такие есть*/
+    }
+    prevSend = *( uint32_t* )data_UART;
 #endif
 }
 
@@ -324,11 +358,26 @@ void OnRxError( void )
 }
 
 void UART_Tx( void ) {
+#ifdef PER_TEST
+	uint32_t data_Tx;
+	if ( !uxQueueMessagesWaitingFromISR(xQueueUartData) ) {
+		return;
+	}
+	xQueueReceiveFromISR( xQueueUartData, &data_Tx, pdFALSE );
+	sprintf(str_to_send, "%s %lu %s %u \n\r",  "Packets lost: ", data_Tx, "of", NUMBER_OF_PACKETS_SENT);
+	HAL_UART_Transmit(&huart2, (uint8_t*)str_to_send, strlen(str_to_send), 10);
+	xQueueReset( xQueueUartData );
+#endif
+
+#ifdef UART_TEST
+	/* Это если понадобится выводить принятые данные в терминал, но сначала надо подправить колбэк
+	 * успешного приёма*/
 	xQueueReceiveFromISR( xQueueUartData, &data_Tx, pdFALSE );
 	full_data_UART = *(uint32_t*)data_Tx;
 	sprintf(str_to_send, "%d\n\r", (int)full_data_UART);
 	HAL_UART_Transmit(&huart2, (uint8_t*)str_to_send, strlen(str_to_send), 10);
-	xQueueReset( xQueueUartData );
+    xQueueReset( xQueueUartData );
+#endif
 }
 
 
