@@ -72,8 +72,10 @@ int main(void)
   MX_USART2_UART_Init();
   MX_RTC_Init();
   MX_SPI1_Init();
-  init_rf();
+
   /* USER CODE BEGIN 2 */
+  InitRfBer();
+//  init_rf();
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in freertos.c) */

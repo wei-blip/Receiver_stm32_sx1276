@@ -34,6 +34,31 @@ extern QueueHandle_t xQueueUartData;
 
 #endif
 
+#ifdef BER_TEST
+
+static char  str_to_send [128] = {0};
+
+static uint16_t count = 0;
+
+static uint8_t data_UART[] = { 0 , 0 };
+static uint8_t error = 0;
+// последовательности Баркера которые будут использоваться при поиске ошибок
+
+BarkerSeq_t BarkerSeq[] =
+  {
+  		{ BARKER_2  , 0x0002 },
+  		{ BARKER_3  , 0x0006 },
+  		{ BARKER_4  , 0x000B },
+  		{ BARKER_5  , 0x001D },
+  		{ BARKER_7  , 0x0072 },
+  		{ BARKER_11 , 0x0712 },
+  		{ BARKER_13 , 0x1F35 }
+  };
+
+extern QueueHandle_t xQueueUartData;
+
+#endif
+
 const uint8_t PingMsg[] = "PING";
 const uint8_t PongMsg[] = "PONG";
 
@@ -105,6 +130,56 @@ void init_rf (void)
 #endif
 
 }
+
+#ifdef BER_TEST
+
+void InitRfBer( void ) {
+	  // Target board initialization
+	  BoardInitMcu( );
+	  BoardInitPeriph( );
+
+	  // Radio initialization
+	  RadioEvents.TxDone = OnTxDone;
+	  RadioEvents.RxDone = OnRxDone;
+	  RadioEvents.TxTimeout = OnTxTimeout;
+	  RadioEvents.RxTimeout = OnRxTimeout;
+	  RadioEvents.RxError = OnRxError;
+
+	  Radio.Init( &RadioEvents );
+
+	  Radio.SetChannel( RF_FREQUENCY );
+
+#if defined( USE_MODEM_LORA )
+
+  Radio.SetTxConfig( MODEM_LORA, TX_OUTPUT_POWER, 0, LORA_BANDWIDTH,
+                                 LORA_SPREADING_FACTOR, LORA_CODINGRATE,
+                                 LORA_PREAMBLE_LENGTH, LORA_FIX_LENGTH_PAYLOAD_ON,
+                                 true, 0, 0, LORA_IQ_INVERSION_ON, 3000 );
+
+  Radio.SetRxConfig( MODEM_LORA, LORA_BANDWIDTH, LORA_SPREADING_FACTOR,
+                                 LORA_CODINGRATE, 0, LORA_PREAMBLE_LENGTH,
+                                 LORA_SYMBOL_TIMEOUT, LORA_FIX_LENGTH_PAYLOAD_ON,
+                                 0, true, 0, 0, LORA_IQ_INVERSION_ON, true );
+
+  Radio.SetMaxPayloadLength( MODEM_LORA, BUFFER_SIZE );
+
+#elif defined( USE_MODEM_FSK )
+
+  Radio.SetTxConfig( MODEM_FSK, TX_OUTPUT_POWER, FSK_FDEV, 0,
+                                FSK_DATARATE, 0,
+                                FSK_PREAMBLE_LENGTH, FSK_FIX_LENGTH_PAYLOAD_ON,
+                                false, 0, 0, 0, 3000 );
+
+  Radio.SetRxConfig( MODEM_FSK, FSK_BANDWIDTH, FSK_DATARATE,
+                                0, FSK_AFC_BANDWIDTH, FSK_PREAMBLE_LENGTH,
+                                0, FSK_FIX_LENGTH_PAYLOAD_ON, 0, false,
+                                0, 0,false, true );
+
+  Radio.SetMaxPayloadLength( MODEM_FSK, BUFFER_SIZE );
+#endif
+}
+
+#endif
 
 #ifdef RTC_TEST
 TimerEvent_t rtc_tim_1 = {0};
@@ -284,9 +359,11 @@ void OnTxDone( void )
 
 void OnRxDone( uint8_t *payload, uint16_t size, int16_t rssi, int8_t snr )
 {
+#ifdef PER_TEST
 	static uint32_t Error;
 	uint32_t Tick = HAL_GetTick();
 	uint32_t dTick = 0;
+#endif
 	HAL_GPIO_TogglePin(LED_EXT_GPIO_Port, LED_EXT_Pin);
 	Radio.Sleep( );
     BufferSize = size;
@@ -335,6 +412,27 @@ void OnRxDone( uint8_t *payload, uint16_t size, int16_t rssi, int8_t snr )
     }
     prevSend = *( uint32_t* )data_UART;
 #endif
+
+#ifdef BER_TEST
+    memcpy( data_UART, payload, sizeof(data_UART)/sizeof(uint8_t) );
+    count++;
+    uint16_t rxSeq = *( uint16_t* )data_UART;
+    BarkerSeq_t* StandartSeq;
+    int i = 0;
+
+    while( ( ( StandartSeq = &BarkerSeq[i++] )->SequenceSize ) != USED_BARKER_SEQ ); /* ищем нужную эталонную последовательность */
+    i = 0;
+    while( i < USED_BARKER_SEQ ){
+    	error += ( rxSeq & ( 0x0001 << i ) ) ^ ( ( StandartSeq->Sequence ) & ( 0x0001 << i ) ); /* считаем количество несоответствующих битов*/
+    	i++;
+    }
+// передаём в очередь для вывод на экран
+    if( count == 1000 ) {
+        if ( xQueueSendToBackFromISR( xQueueUartData,  &error, pdFALSE ) != pdPASS) {
+        	printf( "Failed to post the message" );
+        }
+    }
+#endif
 }
 
 void OnTxTimeout( void )
@@ -358,6 +456,19 @@ void OnRxError( void )
 }
 
 void UART_Tx( void ) {
+#ifdef BER_TEST
+	uint8_t data_Tx;
+	if ( !uxQueueMessagesWaitingFromISR(xQueueUartData) ) {
+		return;
+	}
+	xQueueReceiveFromISR( xQueueUartData, &data_Tx, pdFALSE );
+	sprintf(str_to_send, "%s %u %s %u \n\r",  "Bits lost: ", data_Tx, "of", USED_BARKER_SEQ * count);
+	HAL_UART_Transmit(&huart2, (uint8_t*)str_to_send, strlen(str_to_send), 10);
+	count = 0;
+	error = 0;
+	xQueueReset( xQueueUartData );
+#endif
+
 #ifdef PER_TEST
 	uint32_t data_Tx;
 	if ( !uxQueueMessagesWaitingFromISR(xQueueUartData) ) {
