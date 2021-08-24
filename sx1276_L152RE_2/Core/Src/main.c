@@ -74,8 +74,14 @@ int main(void)
   MX_SPI1_Init();
 
   /* USER CODE BEGIN 2 */
-  InitRfBer();
-//  init_rf();
+  struct InputParametrsRX_s iparam;
+  struct BER_RX_s berParam;
+  berParam.len = BARKER_11;
+  struct PER_RX_s perParam = { 620 , 20 };
+  iparam.pBER = &berParam;
+  iparam.pPER = &perParam;
+  iparam.mode = BER;
+  Measurements( &iparam );
   /* USER CODE END 2 */
 
   /* Call init function for freertos objects (in freertos.c) */

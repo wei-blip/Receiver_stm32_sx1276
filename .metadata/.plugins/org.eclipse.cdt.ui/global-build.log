@@ -8178,3 +8178,1238 @@ Finished building: sx1276_L152RE_2.bin
  
 Finished building: sx1276_L152RE_2.list
  
+08:50:20 **** Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+arm-none-eabi-gcc -o "sx1276_L152RE_2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\user\STM32CubeIDE\workspace_1.6.1_2\sx1276_L152RE_2\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sx1276_L152RE_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: sx1276_L152RE_2.elf
+ 
+arm-none-eabi-objdump -h -S  sx1276_L152RE_2.elf  > "sx1276_L152RE_2.list"
+arm-none-eabi-objcopy  -O binary  sx1276_L152RE_2.elf  "sx1276_L152RE_2.bin"
+arm-none-eabi-size   sx1276_L152RE_2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  41060	    180	   6740	  47980	   bb6c	sx1276_L152RE_2.elf
+Finished building: default.size.stdout
+ 
+Finished building: sx1276_L152RE_2.bin
+ 
+Finished building: sx1276_L152RE_2.list
+ 
+08:54:34 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-size   sx1276_L152RE_2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  41060	    180	   6740	  47980	   bb6c	sx1276_L152RE_2.elf
+Finished building: default.size.stdout
+ 
+09:01:56 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+arm-none-eabi-gcc -o "sx1276_L152RE_2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\user\STM32CubeIDE\workspace_1.6.1_2\sx1276_L152RE_2\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sx1276_L152RE_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: sx1276_L152RE_2.elf
+ 
+arm-none-eabi-objdump -h -S  sx1276_L152RE_2.elf  > "sx1276_L152RE_2.list"
+arm-none-eabi-objcopy  -O binary  sx1276_L152RE_2.elf  "sx1276_L152RE_2.bin"
+arm-none-eabi-size   sx1276_L152RE_2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  41032	    180	   6740	  47952	   bb50	sx1276_L152RE_2.elf
+Finished building: default.size.stdout
+ 
+Finished building: sx1276_L152RE_2.bin
+ 
+Finished building: sx1276_L152RE_2.list
+ 
+09:02:34 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+arm-none-eabi-gcc -o "sx1276_L152RE_2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\user\STM32CubeIDE\workspace_1.6.1_2\sx1276_L152RE_2\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sx1276_L152RE_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: sx1276_L152RE_2.elf
+ 
+arm-none-eabi-objdump -h -S  sx1276_L152RE_2.elf  > "sx1276_L152RE_2.list"
+arm-none-eabi-objcopy  -O binary  sx1276_L152RE_2.elf  "sx1276_L152RE_2.bin"
+arm-none-eabi-size   sx1276_L152RE_2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  41016	    180	   6740	  47936	   bb40	sx1276_L152RE_2.elf
+Finished building: default.size.stdout
+ 
+Finished building: sx1276_L152RE_2.bin
+ 
+Finished building: sx1276_L152RE_2.list
+ 
+09:03:13 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+arm-none-eabi-gcc -o "sx1276_L152RE_2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\user\STM32CubeIDE\workspace_1.6.1_2\sx1276_L152RE_2\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sx1276_L152RE_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: sx1276_L152RE_2.elf
+ 
+arm-none-eabi-objdump -h -S  sx1276_L152RE_2.elf  > "sx1276_L152RE_2.list"
+arm-none-eabi-objcopy  -O binary  sx1276_L152RE_2.elf  "sx1276_L152RE_2.bin"
+arm-none-eabi-size   sx1276_L152RE_2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  41024	    180	   6740	  47944	   bb48	sx1276_L152RE_2.elf
+Finished building: default.size.stdout
+ 
+Finished building: sx1276_L152RE_2.bin
+ 
+Finished building: sx1276_L152RE_2.list
+ 
+09:07:30 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+arm-none-eabi-gcc -o "sx1276_L152RE_2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\user\STM32CubeIDE\workspace_1.6.1_2\sx1276_L152RE_2\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sx1276_L152RE_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: sx1276_L152RE_2.elf
+ 
+arm-none-eabi-objdump -h -S  sx1276_L152RE_2.elf  > "sx1276_L152RE_2.list"
+arm-none-eabi-objcopy  -O binary  sx1276_L152RE_2.elf  "sx1276_L152RE_2.bin"
+arm-none-eabi-size   sx1276_L152RE_2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  41024	    180	   6740	  47944	   bb48	sx1276_L152RE_2.elf
+Finished building: default.size.stdout
+ 
+Finished building: sx1276_L152RE_2.bin
+ 
+Finished building: sx1276_L152RE_2.list
+ 
+18:26:10 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-size   sx1276_L152RE_2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  41024	    180	   6740	  47944	   bb48	sx1276_L152RE_2.elf
+Finished building: default.size.stdout
+ 
+13:30:00 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/freertos.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+In file included from ../app/rf_test.c:8:
+../app/rf-test.h:108:28: warning: 'struct InputParametrsTX_s' declared inside parameter list will not be visible outside of this definition or declaration
+  108 | bool Measurements ( struct InputParametrsTX_s* param );
+      |                            ^~~~~~~~~~~~~~~~~~
+../app/rf_test.c:461:6: error: conflicting types for 'Measurements'
+  461 | bool Measurements ( struct InputParametrsTX_s* param ) {
+      |      ^~~~~~~~~~~~
+In file included from ../app/rf_test.c:8:
+../app/rf-test.h:108:6: note: previous declaration of 'Measurements' was here
+  108 | bool Measurements ( struct InputParametrsTX_s* param );
+      |      ^~~~~~~~~~~~
+In file included from ../Core/Src/freertos.c:29:
+C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/rf-test.h:108:28: warning: 'struct InputParametrsTX_s' declared inside parameter list will not be visible outside of this definition or declaration
+  108 | bool Measurements ( struct InputParametrsTX_s* param );
+      |                            ^~~~~~~~~~~~~~~~~~
+In file included from ../Core/Src/main.c:14:
+C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/rf-test.h:108:28: warning: 'struct InputParametrsTX_s' declared inside parameter list will not be visible outside of this definition or declaration
+  108 | bool Measurements ( struct InputParametrsTX_s* param );
+      |                            ^~~~~~~~~~~~~~~~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:77:3: warning: implicit declaration of function 'InitRfBer' [-Wimplicit-function-declaration]
+   77 |   InitRfBer();
+      |   ^~~~~~~~~
+../app/rf_test.c: In function 'Measurements':
+../app/rf_test.c:479:1: warning: control reaches end of non-void function [-Wreturn-type]
+  479 | }
+      | ^
+make: *** [app/subdir.mk:54: app/rf_test.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+13:30:34 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/freertos.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../app/rf_test.c: In function 'Measurements':
+../app/rf_test.c:479:1: warning: control reaches end of non-void function [-Wreturn-type]
+  479 | }
+      | ^
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:77:3: warning: implicit declaration of function 'InitRfBer' [-Wimplicit-function-declaration]
+   77 |   InitRfBer();
+      |   ^~~~~~~~~
+arm-none-eabi-gcc -o "sx1276_L152RE_2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\user\STM32CubeIDE\workspace_1.6.1_2\sx1276_L152RE_2\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sx1276_L152RE_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.6.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: Core/Src/main.o: in function `main':
+C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/Debug/../Core/Src/main.c:77: undefined reference to `InitRfBer'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:71: sx1276_L152RE_2.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+13:31:39 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+arm-none-eabi-gcc -o "sx1276_L152RE_2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\user\STM32CubeIDE\workspace_1.6.1_2\sx1276_L152RE_2\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sx1276_L152RE_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.6.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: Core/Src/main.o: in function `main':
+C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/Debug/../Core/Src/main.c:77: undefined reference to `InitRfBer'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:71: sx1276_L152RE_2.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+13:34:28 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+../app/rf_test.c:27:17: warning: 'prevTick' defined but not used [-Wunused-variable]
+   27 | static uint32_t prevTick = 0;
+      |                 ^~~~~~~~
+../app/rf_test.c:26:17: warning: 'prevSend' defined but not used [-Wunused-variable]
+   26 | static uint32_t prevSend = 0;
+      |                 ^~~~~~~~
+arm-none-eabi-gcc -o "sx1276_L152RE_2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\user\STM32CubeIDE\workspace_1.6.1_2\sx1276_L152RE_2\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sx1276_L152RE_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.6.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: Core/Src/main.o: in function `main':
+C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/Debug/../Core/Src/main.c:77: undefined reference to `InitRfBer'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:71: sx1276_L152RE_2.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+13:36:02 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+../app/rf_test.c: In function 'OnRxDone':
+../app/rf_test.c:300:12: warning: unused variable 'dTick' [-Wunused-variable]
+  300 |   uint32_t dTick = 0;
+      |            ^~~~~
+../app/rf_test.c:299:12: warning: unused variable 'Tick' [-Wunused-variable]
+  299 |   uint32_t Tick = HAL_GetTick();
+      |            ^~~~
+../app/rf_test.c:298:19: warning: unused variable 'Error' [-Wunused-variable]
+  298 |   static uint32_t Error;
+      |                   ^~~~~
+At top level:
+../app/rf_test.c:298:19: warning: 'Error' defined but not used [-Wunused-variable]
+../app/rf_test.c:27:17: warning: 'prevTick' defined but not used [-Wunused-variable]
+   27 | static uint32_t prevTick = 0;
+      |                 ^~~~~~~~
+../app/rf_test.c:26:17: warning: 'prevSend' defined but not used [-Wunused-variable]
+   26 | static uint32_t prevSend = 0;
+      |                 ^~~~~~~~
+arm-none-eabi-gcc -o "sx1276_L152RE_2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\user\STM32CubeIDE\workspace_1.6.1_2\sx1276_L152RE_2\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sx1276_L152RE_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.6.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: Core/Src/main.o: in function `main':
+C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/Debug/../Core/Src/main.c:77: undefined reference to `InitRfBer'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:71: sx1276_L152RE_2.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+13:36:46 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+../app/rf_test.c: In function 'OnRxDone':
+../app/rf_test.c:300:12: warning: unused variable 'dTick' [-Wunused-variable]
+  300 |   uint32_t dTick = 0;
+      |            ^~~~~
+../app/rf_test.c:299:12: warning: unused variable 'Tick' [-Wunused-variable]
+  299 |   uint32_t Tick = HAL_GetTick();
+      |            ^~~~
+../app/rf_test.c:298:19: warning: unused variable 'Error' [-Wunused-variable]
+  298 |   static uint32_t Error;
+      |                   ^~~~~
+../app/rf_test.c:319:17: error: 'Tick' undeclared (first use in this function); did you mean 'uwTick'?
+  319 |      prevTick = Tick;  /* фиксируем время начала приёма */
+      |                 ^~~~
+      |                 uwTick
+../app/rf_test.c:319:17: note: each undeclared identifier is reported only once for each function it appears in
+../app/rf_test.c:322:6: error: 'dTick' undeclared (first use in this function); did you mean 'uwTick'?
+  322 |      dTick = Tick - prevTick; // находим разницу времени между двумя принятыми посылками
+      |      ^~~~~
+      |      uwTick
+../app/rf_test.c:325:18: error: 'AVERAGE_TIME' undeclared (first use in this function)
+  325 |     if ( dTick > AVERAGE_TIME ) {
+      |                  ^~~~~~~~~~~~
+../app/rf_test.c:327:67: error: 'NUMBER_OF_PACKETS_SENT' undeclared (first use in this function)
+  327 |       if ( !( ( *( uint32_t* )data_UART == 0 ) && ( prevSend == ( NUMBER_OF_PACKETS_SENT - 1 ) ) ) ) {
+      |                                                                   ^~~~~~~~~~~~~~~~~~~~~~
+../app/rf_test.c:328:11: error: 'Error' undeclared (first use in this function); did you mean 'error'?
+  328 |           Error += (NUMBER_OF_PACKETS_SENT - prevSend) - 1; /* если произошла потеря и начался следующий период передачи
+      |           ^~~~~
+      |           error
+At top level:
+../app/rf_test.c:298:19: warning: 'Error' defined but not used [-Wunused-variable]
+  298 |   static uint32_t Error;
+      |                   ^~~~~
+make: *** [app/subdir.mk:54: app/rf_test.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+13:37:55 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+../app/rf_test.c: In function 'OnRxDone':
+../app/rf_test.c:300:12: warning: unused variable 'dTick' [-Wunused-variable]
+  300 |   uint32_t dTick = 0;
+      |            ^~~~~
+../app/rf_test.c:299:12: warning: unused variable 'Tick' [-Wunused-variable]
+  299 |   uint32_t Tick = HAL_GetTick();
+      |            ^~~~
+../app/rf_test.c:298:19: warning: unused variable 'Error' [-Wunused-variable]
+  298 |   static uint32_t Error;
+      |                   ^~~~~
+../app/rf_test.c:319:17: error: 'Tick' undeclared (first use in this function); did you mean 'uwTick'?
+  319 |      prevTick = Tick;  /* фиксируем время начала приёма */
+      |                 ^~~~
+      |                 uwTick
+../app/rf_test.c:319:17: note: each undeclared identifier is reported only once for each function it appears in
+../app/rf_test.c:322:6: error: 'dTick' undeclared (first use in this function); did you mean 'uwTick'?
+  322 |      dTick = Tick - prevTick; // находим разницу времени между двумя принятыми посылками
+      |      ^~~~~
+      |      uwTick
+../app/rf_test.c:325:18: error: 'AVERAGE_TIME' undeclared (first use in this function)
+  325 |     if ( dTick > AVERAGE_TIME ) {
+      |                  ^~~~~~~~~~~~
+../app/rf_test.c:327:67: error: 'NUMBER_OF_PACKETS_SENT' undeclared (first use in this function)
+  327 |       if ( !( ( *( uint32_t* )data_UART == 0 ) && ( prevSend == ( NUMBER_OF_PACKETS_SENT - 1 ) ) ) ) {
+      |                                                                   ^~~~~~~~~~~~~~~~~~~~~~
+../app/rf_test.c:328:11: error: 'Error' undeclared (first use in this function); did you mean 'error'?
+  328 |           Error += (NUMBER_OF_PACKETS_SENT - prevSend) - 1; /* если произошла потеря и начался следующий период передачи
+      |           ^~~~~
+      |           error
+At top level:
+../app/rf_test.c:298:19: warning: 'Error' defined but not used [-Wunused-variable]
+  298 |   static uint32_t Error;
+      |                   ^~~~~
+make: *** [app/subdir.mk:54: app/rf_test.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+13:39:37 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+../app/rf_test.c: In function 'OnRxDone':
+../app/rf_test.c:300:12: warning: unused variable 'dTick' [-Wunused-variable]
+  300 |   uint32_t dTick = 0;
+      |            ^~~~~
+../app/rf_test.c:299:12: warning: unused variable 'Tick' [-Wunused-variable]
+  299 |   uint32_t Tick = HAL_GetTick();
+      |            ^~~~
+../app/rf_test.c:319:17: error: 'Tick' undeclared (first use in this function); did you mean 'uwTick'?
+  319 |      prevTick = Tick;  /* фиксируем время начала приёма */
+      |                 ^~~~
+      |                 uwTick
+../app/rf_test.c:319:17: note: each undeclared identifier is reported only once for each function it appears in
+../app/rf_test.c:322:6: error: 'dTick' undeclared (first use in this function); did you mean 'uwTick'?
+  322 |      dTick = Tick - prevTick; // находим разницу времени между двумя принятыми посылками
+      |      ^~~~~
+      |      uwTick
+../app/rf_test.c:325:18: error: 'AVERAGE_TIME' undeclared (first use in this function)
+  325 |     if ( dTick > AVERAGE_TIME ) {
+      |                  ^~~~~~~~~~~~
+../app/rf_test.c:327:67: error: 'NUMBER_OF_PACKETS_SENT' undeclared (first use in this function)
+  327 |       if ( !( ( *( uint32_t* )data_UART == 0 ) && ( prevSend == ( NUMBER_OF_PACKETS_SENT - 1 ) ) ) ) {
+      |                                                                   ^~~~~~~~~~~~~~~~~~~~~~
+make: *** [app/subdir.mk:54: app/rf_test.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+13:41:28 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+../app/rf_test.c: In function 'OnRxDone':
+../app/rf_test.c:323:18: error: 'AVERAGE_TIME' undeclared (first use in this function)
+  323 |     if ( dTick > AVERAGE_TIME ) {
+      |                  ^~~~~~~~~~~~
+../app/rf_test.c:323:18: note: each undeclared identifier is reported only once for each function it appears in
+../app/rf_test.c:325:67: error: 'NUMBER_OF_PACKETS_SENT' undeclared (first use in this function)
+  325 |       if ( !( ( *( uint32_t* )data_UART == 0 ) && ( prevSend == ( NUMBER_OF_PACKETS_SENT - 1 ) ) ) ) {
+      |                                                                   ^~~~~~~~~~~~~~~~~~~~~~
+make: *** [app/subdir.mk:54: app/rf_test.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+13:42:29 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/freertos.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:77:3: warning: implicit declaration of function 'InitRfBer' [-Wimplicit-function-declaration]
+   77 |   InitRfBer();
+      |   ^~~~~~~~~
+../app/rf_test.c:29:16: warning: 'error' defined but not used [-Wunused-variable]
+   29 | static uint8_t error = 0;
+      |                ^~~~~
+../app/rf_test.c:24:14: warning: 'str_to_send' defined but not used [-Wunused-variable]
+   24 | static char  str_to_send [128] = {0};
+      |              ^~~~~~~~~~~
+arm-none-eabi-gcc -o "sx1276_L152RE_2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\user\STM32CubeIDE\workspace_1.6.1_2\sx1276_L152RE_2\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sx1276_L152RE_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.6.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: Core/Src/main.o: in function `main':
+C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/Debug/../Core/Src/main.c:77: undefined reference to `InitRfBer'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:71: sx1276_L152RE_2.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+13:43:15 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "sx1276_L152RE_2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\user\STM32CubeIDE\workspace_1.6.1_2\sx1276_L152RE_2\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sx1276_L152RE_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: sx1276_L152RE_2.elf
+ 
+arm-none-eabi-objdump -h -S  sx1276_L152RE_2.elf  > "sx1276_L152RE_2.list"
+arm-none-eabi-objcopy  -O binary  sx1276_L152RE_2.elf  "sx1276_L152RE_2.bin"
+arm-none-eabi-size   sx1276_L152RE_2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32696	     48	   6472	  39216	   9930	sx1276_L152RE_2.elf
+Finished building: default.size.stdout
+ 
+Finished building: sx1276_L152RE_2.bin
+ 
+Finished building: sx1276_L152RE_2.list
+ 
+13:59:30 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/freertos.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../app/rf_test.c: In function 'Measurements':
+../app/rf_test.c:442:11: error: 'param' undeclared (first use in this function); did you mean 'iparam'?
+  442 |  switch ( param->mode ) {
+      |           ^~~~~
+      |           iparam
+../app/rf_test.c:442:11: note: each undeclared identifier is reported only once for each function it appears in
+At top level:
+../app/rf_test.c:24:14: warning: 'str_to_send' defined but not used [-Wunused-variable]
+   24 | static char  str_to_send [128] = {0};
+      |              ^~~~~~~~~~~
+make: *** [app/subdir.mk:54: app/rf_test.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+14:00:30 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+../app/rf_test.c: In function 'OnRxDone':
+../app/rf_test.c:313:11: error: invalid type argument of '->' (have 'struct InputParametrsTX_s')
+  313 | if( iparam->mode == PER ) {
+      |           ^~
+../app/rf_test.c:346:16: error: invalid type argument of '->' (have 'struct InputParametrsTX_s')
+  346 | else if( iparam->mode == BER ) {
+      |                ^~
+../app/rf_test.c: In function 'Measurements':
+../app/rf_test.c:439:17: error: invalid type argument of '->' (have 'struct InputParametrsTX_s')
+  439 |  switch ( iparam->mode ) {
+      |                 ^~
+../app/rf_test.c:441:8: error: 'param' undeclared (first use in this function); did you mean 'iparam'?
+  441 |   if ( param -> pBER != NULL ) InitRf( false );
+      |        ^~~~~
+      |        iparam
+../app/rf_test.c:441:8: note: each undeclared identifier is reported only once for each function it appears in
+At top level:
+../app/rf_test.c:24:14: warning: 'str_to_send' defined but not used [-Wunused-variable]
+   24 | static char  str_to_send [128] = {0};
+      |              ^~~~~~~~~~~
+make: *** [app/subdir.mk:54: app/rf_test.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+14:01:18 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+../app/rf_test.c: In function 'OnRxDone':
+../app/rf_test.c:313:11: error: invalid type argument of '->' (have 'struct InputParametrsTX_s')
+  313 | if( iparam->mode == PER ) {
+      |           ^~
+../app/rf_test.c:346:16: error: invalid type argument of '->' (have 'struct InputParametrsTX_s')
+  346 | else if( iparam->mode == BER ) {
+      |                ^~
+../app/rf_test.c: In function 'Measurements':
+../app/rf_test.c:439:17: error: invalid type argument of '->' (have 'struct InputParametrsTX_s')
+  439 |  switch ( iparam->mode ) {
+      |                 ^~
+../app/rf_test.c:441:14: error: invalid type argument of '->' (have 'struct InputParametrsTX_s')
+  441 |   if ( iparam->pBER != NULL ) InitRf( false );
+      |              ^~
+../app/rf_test.c:445:14: error: invalid type argument of '->' (have 'struct InputParametrsTX_s')
+  445 |   if ( iparam->pPER != NULL ) {
+      |              ^~
+At top level:
+../app/rf_test.c:24:14: warning: 'str_to_send' defined but not used [-Wunused-variable]
+   24 | static char  str_to_send [128] = {0};
+      |              ^~~~~~~~~~~
+make: *** [app/subdir.mk:54: app/rf_test.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+14:01:56 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+../app/rf_test.c: In function 'OnRxDone':
+../app/rf_test.c:313:11: error: invalid type argument of '->' (have 'struct InputParametrsTX_s')
+  313 | if( iparam->mode == PER ) {
+      |           ^~
+../app/rf_test.c:346:16: error: invalid type argument of '->' (have 'struct InputParametrsTX_s')
+  346 | else if( iparam->mode == BER ) {
+      |                ^~
+../app/rf_test.c: In function 'Measurements':
+../app/rf_test.c:441:8: error: 'iparampBER' undeclared (first use in this function); did you mean 'iparam'?
+  441 |   if ( iparampBER != NULL ) InitRf( false );
+      |        ^~~~~~~~~~
+      |        iparam
+../app/rf_test.c:441:8: note: each undeclared identifier is reported only once for each function it appears in
+../app/rf_test.c:445:14: error: invalid type argument of '->' (have 'struct InputParametrsTX_s')
+  445 |   if ( iparam->pPER != NULL ) {
+      |              ^~
+At top level:
+../app/rf_test.c:24:14: warning: 'str_to_send' defined but not used [-Wunused-variable]
+   24 | static char  str_to_send [128] = {0};
+      |              ^~~~~~~~~~~
+make: *** [app/subdir.mk:54: app/rf_test.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+14:02:16 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+../app/rf_test.c: In function 'OnRxDone':
+../app/rf_test.c:313:11: error: invalid type argument of '->' (have 'struct InputParametrsTX_s')
+  313 | if( iparam->mode == PER ) {
+      |           ^~
+../app/rf_test.c:346:16: error: invalid type argument of '->' (have 'struct InputParametrsTX_s')
+  346 | else if( iparam->mode == BER ) {
+      |                ^~
+At top level:
+../app/rf_test.c:24:14: warning: 'str_to_send' defined but not used [-Wunused-variable]
+   24 | static char  str_to_send [128] = {0};
+      |              ^~~~~~~~~~~
+make: *** [app/subdir.mk:54: app/rf_test.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+14:02:37 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+../app/rf_test.c:24:14: warning: 'str_to_send' defined but not used [-Wunused-variable]
+   24 | static char  str_to_send [128] = {0};
+      |              ^~~~~~~~~~~
+arm-none-eabi-gcc -o "sx1276_L152RE_2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\user\STM32CubeIDE\workspace_1.6.1_2\sx1276_L152RE_2\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sx1276_L152RE_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: sx1276_L152RE_2.elf
+ 
+arm-none-eabi-objdump -h -S  sx1276_L152RE_2.elf  > "sx1276_L152RE_2.list"
+arm-none-eabi-objcopy  -O binary  sx1276_L152RE_2.elf  "sx1276_L152RE_2.bin"
+arm-none-eabi-size   sx1276_L152RE_2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  32696	     48	   6472	  39216	   9930	sx1276_L152RE_2.elf
+Finished building: default.size.stdout
+ 
+Finished building: sx1276_L152RE_2.bin
+ 
+Finished building: sx1276_L152RE_2.list
+ 
+14:04:34 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+../app/rf_test.c: In function 'UART_Tx':
+../app/rf_test.c:399:2: error: 'error' undeclared (first use in this function); did you mean 'Error'?
+  399 |  error = 0;
+      |  ^~~~~
+      |  Error
+../app/rf_test.c:399:2: note: each undeclared identifier is reported only once for each function it appears in
+../app/rf_test.c:400:2: error: #endif without #if
+  400 | #endif
+      |  ^~~~~
+make: *** [app/subdir.mk:54: app/rf_test.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+14:08:22 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+../app/rf_test.c: In function 'UART_Tx':
+../app/rf_test.c:392:29: warning: format '%u' expects argument of type 'unsigned int', but argument 4 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  392 |   sprintf(str_to_send, "%s %u %s %u \n\r",  "Bits lost: ", data_Tx, "of", iparam.pBER->len);
+      |                            ~^                              ~~~~~~~
+      |                             |                              |
+      |                             unsigned int                   uint32_t {aka long unsigned int}
+      |                            %lu
+arm-none-eabi-gcc -o "sx1276_L152RE_2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\user\STM32CubeIDE\workspace_1.6.1_2\sx1276_L152RE_2\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sx1276_L152RE_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.6.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: app/rf_test.o: in function `UART_Tx':
+C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/Debug/../app/rf_test.c:409: undefined reference to `iparam'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:71: sx1276_L152RE_2.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+14:09:50 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+arm-none-eabi-gcc -o "sx1276_L152RE_2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\user\STM32CubeIDE\workspace_1.6.1_2\sx1276_L152RE_2\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sx1276_L152RE_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.6.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: app/rf_test.o: in function `UART_Tx':
+C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/Debug/../app/rf_test.c:409: undefined reference to `iparam'
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:71: sx1276_L152RE_2.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+14:11:44 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:80:3: error: 'iparam' undeclared (first use in this function)
+   80 |   iparam.pBER = &berParam;
+      |   ^~~~~~
+../Core/Src/main.c:80:3: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Core/Src/subdir.mk:56: Core/Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+14:12:32 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "sx1276_L152RE_2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\user\STM32CubeIDE\workspace_1.6.1_2\sx1276_L152RE_2\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sx1276_L152RE_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: sx1276_L152RE_2.elf
+ 
+arm-none-eabi-objdump -h -S  sx1276_L152RE_2.elf  > "sx1276_L152RE_2.list"
+arm-none-eabi-objcopy  -O binary  sx1276_L152RE_2.elf  "sx1276_L152RE_2.bin"
+arm-none-eabi-size   sx1276_L152RE_2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  41416	    180	   6764	  48360	   bce8	sx1276_L152RE_2.elf
+Finished building: default.size.stdout
+ 
+Finished building: sx1276_L152RE_2.bin
+ 
+Finished building: sx1276_L152RE_2.list
+ 
+14:15:47 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+../app/rf_test.c: In function 'OnRxDone':
+../app/rf_test.c:324:30: error: expected identifier before '-' token
+  324 |           Error += ( iparam. - prevSend ) - 1; /* если произошла потеря и начался следующий период передачи
+      |                              ^
+make: *** [app/subdir.mk:54: app/rf_test.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+14:16:45 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+arm-none-eabi-gcc -o "sx1276_L152RE_2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\user\STM32CubeIDE\workspace_1.6.1_2\sx1276_L152RE_2\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sx1276_L152RE_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: sx1276_L152RE_2.elf
+ 
+arm-none-eabi-objdump -h -S  sx1276_L152RE_2.elf  > "sx1276_L152RE_2.list"
+arm-none-eabi-objcopy  -O binary  sx1276_L152RE_2.elf  "sx1276_L152RE_2.bin"
+arm-none-eabi-size   sx1276_L152RE_2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  41456	    180	   6764	  48400	   bd10	sx1276_L152RE_2.elf
+Finished building: default.size.stdout
+ 
+Finished building: sx1276_L152RE_2.bin
+ 
+Finished building: sx1276_L152RE_2.list
+ 
+14:17:31 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-size   sx1276_L152RE_2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  41456	    180	   6764	  48400	   bd10	sx1276_L152RE_2.elf
+Finished building: default.size.stdout
+ 
+14:19:57 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+arm-none-eabi-gcc -o "sx1276_L152RE_2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\user\STM32CubeIDE\workspace_1.6.1_2\sx1276_L152RE_2\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sx1276_L152RE_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: sx1276_L152RE_2.elf
+ 
+arm-none-eabi-objdump -h -S  sx1276_L152RE_2.elf  > "sx1276_L152RE_2.list"
+arm-none-eabi-objcopy  -O binary  sx1276_L152RE_2.elf  "sx1276_L152RE_2.bin"
+arm-none-eabi-size   sx1276_L152RE_2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  41468	    180	   6764	  48412	   bd1c	sx1276_L152RE_2.elf
+Finished building: default.size.stdout
+ 
+Finished building: sx1276_L152RE_2.bin
+ 
+Finished building: sx1276_L152RE_2.list
+ 
+14:21:56 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-size   sx1276_L152RE_2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  41468	    180	   6764	  48412	   bd1c	sx1276_L152RE_2.elf
+Finished building: default.size.stdout
+ 
+14:23:44 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+../app/rf_test.c: In function 'UART_Tx':
+../app/rf_test.c:392:37: warning: format '%lu' expects argument of type 'long unsigned int', but argument 6 has type 'int' [-Wformat=]
+  392 |   sprintf(str_to_send, "%s %lu %s %lu \n\r",  "Bits lost: ", data_Tx, "of", iparam.pBER->len);
+      |                                   ~~^                                       ~~~~~~~~~~~~~~~~
+      |                                     |                                                  |
+      |                                     long unsigned int                                  int
+      |                                   %u
+arm-none-eabi-gcc -o "sx1276_L152RE_2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\user\STM32CubeIDE\workspace_1.6.1_2\sx1276_L152RE_2\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sx1276_L152RE_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: sx1276_L152RE_2.elf
+ 
+arm-none-eabi-objdump -h -S  sx1276_L152RE_2.elf  > "sx1276_L152RE_2.list"
+arm-none-eabi-objcopy  -O binary  sx1276_L152RE_2.elf  "sx1276_L152RE_2.bin"
+arm-none-eabi-size   sx1276_L152RE_2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  41492	    180	   6764	  48436	   bd34	sx1276_L152RE_2.elf
+Finished building: default.size.stdout
+ 
+Finished building: sx1276_L152RE_2.bin
+ 
+Finished building: sx1276_L152RE_2.list
+ 
+14:24:38 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-size   sx1276_L152RE_2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  41492	    180	   6764	  48436	   bd34	sx1276_L152RE_2.elf
+Finished building: default.size.stdout
+ 
+14:27:01 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+../app/rf_test.c: In function 'UART_Tx':
+../app/rf_test.c:392:77: error: invalid type argument of unary '*' (have 'int')
+  392 |   sprintf(str_to_send, "%s %lu %s %lu \n\r",  "Bits lost: ", data_Tx, "of", *( iparam.pBER->len ) );
+      |                                                                             ^~~~~~~~~~~~~~~~~~~~~
+make: *** [app/subdir.mk:54: app/rf_test.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+14:27:09 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+../app/rf_test.c: In function 'UART_Tx':
+../app/rf_test.c:392:77: error: invalid type argument of unary '*' (have 'int')
+  392 |   sprintf(str_to_send, "%s %lu %s %lu \n\r",  "Bits lost: ", data_Tx, "of", *( iparam.pBER->len ) );
+      |                                                                             ^~~~~~~~~~~~~~~~~~~~~
+make: *** [app/subdir.mk:54: app/rf_test.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+14:29:07 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+../app/rf_test.c: In function 'UART_Tx':
+../app/rf_test.c:392:37: warning: format '%lu' expects argument of type 'long unsigned int', but argument 6 has type 'int' [-Wformat=]
+  392 |   sprintf(str_to_send, "%s %lu %s %lu \n\r",  "Bits lost: ", data_Tx, "of", iparam.pBER->len );
+      |                                   ~~^                                       ~~~~~~~~~~~~~~~~
+      |                                     |                                                  |
+      |                                     long unsigned int                                  int
+      |                                   %u
+arm-none-eabi-gcc -o "sx1276_L152RE_2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\user\STM32CubeIDE\workspace_1.6.1_2\sx1276_L152RE_2\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sx1276_L152RE_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: sx1276_L152RE_2.elf
+ 
+arm-none-eabi-objdump -h -S  sx1276_L152RE_2.elf  > "sx1276_L152RE_2.list"
+arm-none-eabi-objcopy  -O binary  sx1276_L152RE_2.elf  "sx1276_L152RE_2.bin"
+arm-none-eabi-size   sx1276_L152RE_2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  41492	    180	   6764	  48436	   bd34	sx1276_L152RE_2.elf
+Finished building: default.size.stdout
+ 
+Finished building: sx1276_L152RE_2.bin
+ 
+Finished building: sx1276_L152RE_2.list
+ 
+14:37:23 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-size   sx1276_L152RE_2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  41492	    180	   6764	  48436	   bd34	sx1276_L152RE_2.elf
+Finished building: default.size.stdout
+ 
+14:40:43 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-size   sx1276_L152RE_2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  41492	    180	   6764	  48436	   bd34	sx1276_L152RE_2.elf
+Finished building: default.size.stdout
+ 
+14:46:32 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-size   sx1276_L152RE_2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  41492	    180	   6764	  48436	   bd34	sx1276_L152RE_2.elf
+Finished building: default.size.stdout
+ 
+14:55:56 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-size   sx1276_L152RE_2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  41492	    180	   6764	  48436	   bd34	sx1276_L152RE_2.elf
+Finished building: default.size.stdout
+ 
+15:03:49 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/freertos.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../app/rf_test.c: In function 'UART_Tx':
+../app/rf_test.c:391:6: error: 'iparam' undeclared (first use in this function)
+  391 |  if( iparam.mode == BER ) {
+      |      ^~~~~~
+../app/rf_test.c:391:6: note: each undeclared identifier is reported only once for each function it appears in
+../app/rf_test.c:392:37: warning: format '%lu' expects argument of type 'long unsigned int', but argument 6 has type 'int' [-Wformat=]
+  392 |   sprintf(str_to_send, "%s %lu %s %lu \n\r",  "Bits lost: ", data_Tx, "of", iparamCopy.pBER->len );
+      |                                   ~~^                                       ~~~~~~~~~~~~~~~~~~~~
+      |                                     |                                                      |
+      |                                     long unsigned int                                      int
+      |                                   %u
+../app/rf_test.c: In function 'Measurements':
+../app/rf_test.c:431:18: error: 'iparam' undeclared (first use in this function); did you mean 'param'?
+  431 |  iparamCopy = *( iparam );
+      |                  ^~~~~~
+      |                  param
+make: *** [app/subdir.mk:54: app/rf_test.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:04:09 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+../app/rf_test.c: In function 'UART_Tx':
+../app/rf_test.c:391:6: error: 'iparam' undeclared (first use in this function)
+  391 |  if( iparam.mode == BER ) {
+      |      ^~~~~~
+../app/rf_test.c:391:6: note: each undeclared identifier is reported only once for each function it appears in
+../app/rf_test.c:392:37: warning: format '%lu' expects argument of type 'long unsigned int', but argument 6 has type 'int' [-Wformat=]
+  392 |   sprintf(str_to_send, "%s %lu %s %lu \n\r",  "Bits lost: ", data_Tx, "of", iparamCopy.pBER->len );
+      |                                   ~~^                                       ~~~~~~~~~~~~~~~~~~~~
+      |                                     |                                                      |
+      |                                     long unsigned int                                      int
+      |                                   %u
+../app/rf_test.c: In function 'Measurements':
+../app/rf_test.c:438:8: error: 'iparam' undeclared (first use in this function); did you mean 'param'?
+  438 |   if ( iparam.pPER != NULL ) {
+      |        ^~~~~~
+      |        param
+make: *** [app/subdir.mk:54: app/rf_test.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:04:32 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+../app/rf_test.c: In function 'UART_Tx':
+../app/rf_test.c:391:6: error: 'iparam' undeclared (first use in this function)
+  391 |  if( iparam.mode == BER ) {
+      |      ^~~~~~
+../app/rf_test.c:391:6: note: each undeclared identifier is reported only once for each function it appears in
+../app/rf_test.c:392:37: warning: format '%lu' expects argument of type 'long unsigned int', but argument 6 has type 'int' [-Wformat=]
+  392 |   sprintf(str_to_send, "%s %lu %s %lu \n\r",  "Bits lost: ", data_Tx, "of", iparamCopy.pBER->len );
+      |                                   ~~^                                       ~~~~~~~~~~~~~~~~~~~~
+      |                                     |                                                      |
+      |                                     long unsigned int                                      int
+      |                                   %u
+make: *** [app/subdir.mk:54: app/rf_test.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:04:51 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+../app/rf_test.c: In function 'UART_Tx':
+../app/rf_test.c:392:37: warning: format '%lu' expects argument of type 'long unsigned int', but argument 6 has type 'int' [-Wformat=]
+  392 |   sprintf(str_to_send, "%s %lu %s %lu \n\r",  "Bits lost: ", data_Tx, "of", iparamCopy.pBER->len );
+      |                                   ~~^                                       ~~~~~~~~~~~~~~~~~~~~
+      |                                     |                                                      |
+      |                                     long unsigned int                                      int
+      |                                   %u
+arm-none-eabi-gcc -o "sx1276_L152RE_2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\user\STM32CubeIDE\workspace_1.6.1_2\sx1276_L152RE_2\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sx1276_L152RE_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: sx1276_L152RE_2.elf
+ 
+arm-none-eabi-objdump -h -S  sx1276_L152RE_2.elf  > "sx1276_L152RE_2.list"
+arm-none-eabi-objcopy  -O binary  sx1276_L152RE_2.elf  "sx1276_L152RE_2.bin"
+arm-none-eabi-size   sx1276_L152RE_2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  41508	    180	   6780	  48468	   bd54	sx1276_L152RE_2.elf
+Finished building: default.size.stdout
+ 
+Finished building: sx1276_L152RE_2.bin
+ 
+Finished building: sx1276_L152RE_2.list
+ 
+15:05:01 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-size   sx1276_L152RE_2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  41508	    180	   6780	  48468	   bd54	sx1276_L152RE_2.elf
+Finished building: default.size.stdout
+ 
+15:08:36 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../app/rf_test.c: In function 'UART_Tx':
+../app/rf_test.c:392:37: warning: format '%lu' expects argument of type 'long unsigned int', but argument 6 has type 'int' [-Wformat=]
+  392 |   sprintf(str_to_send, "%s %lu %s %lu \n\r",  "Bits lost: ", data_Tx, "of", iparamCopy.pBER->len );
+      |                                   ~~^                                       ~~~~~~~~~~~~~~~~~~~~
+      |                                     |                                                      |
+      |                                     long unsigned int                                      int
+      |                                   %u
+arm-none-eabi-gcc -o "sx1276_L152RE_2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\user\STM32CubeIDE\workspace_1.6.1_2\sx1276_L152RE_2\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sx1276_L152RE_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: sx1276_L152RE_2.elf
+ 
+arm-none-eabi-objdump -h -S  sx1276_L152RE_2.elf  > "sx1276_L152RE_2.list"
+arm-none-eabi-objcopy  -O binary  sx1276_L152RE_2.elf  "sx1276_L152RE_2.bin"
+arm-none-eabi-size   sx1276_L152RE_2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  41528	    180	   6764	  48472	   bd58	sx1276_L152RE_2.elf
+Finished building: default.size.stdout
+ 
+Finished building: sx1276_L152RE_2.bin
+ 
+Finished building: sx1276_L152RE_2.list
+ 
+15:14:08 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+../app/rf_test.c: In function 'UART_Tx':
+../app/rf_test.c:392:37: warning: format '%lu' expects argument of type 'long unsigned int', but argument 6 has type 'int' [-Wformat=]
+  392 |   sprintf(str_to_send, "%s %lu %s %lu \n\r",  "Bits lost: ", data_Tx, "of", iparamCopy.pBER->len );
+      |                                   ~~^                                       ~~~~~~~~~~~~~~~~~~~~
+      |                                     |                                                      |
+      |                                     long unsigned int                                      int
+      |                                   %u
+arm-none-eabi-gcc -o "sx1276_L152RE_2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\user\STM32CubeIDE\workspace_1.6.1_2\sx1276_L152RE_2\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sx1276_L152RE_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: sx1276_L152RE_2.elf
+ 
+arm-none-eabi-objdump -h -S  sx1276_L152RE_2.elf  > "sx1276_L152RE_2.list"
+arm-none-eabi-objcopy  -O binary  sx1276_L152RE_2.elf  "sx1276_L152RE_2.bin"
+arm-none-eabi-size   sx1276_L152RE_2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  41532	    180	   6764	  48476	   bd5c	sx1276_L152RE_2.elf
+Finished building: default.size.stdout
+ 
+Finished building: sx1276_L152RE_2.bin
+ 
+Finished building: sx1276_L152RE_2.list
+ 
+15:14:16 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-size   sx1276_L152RE_2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  41532	    180	   6764	  48476	   bd5c	sx1276_L152RE_2.elf
+Finished building: default.size.stdout
+ 
+15:17:50 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+../app/rf_test.c: In function 'UART_Tx':
+../app/rf_test.c:392:37: warning: format '%lu' expects argument of type 'long unsigned int', but argument 6 has type 'int' [-Wformat=]
+  392 |   sprintf(str_to_send, "%s %lu %s %lu \n\r",  "Bits lost: ", data_Tx, "of", iparamCopy.pBER->len );
+      |                                   ~~^                                       ~~~~~~~~~~~~~~~~~~~~
+      |                                     |                                                      |
+      |                                     long unsigned int                                      int
+      |                                   %u
+arm-none-eabi-gcc -o "sx1276_L152RE_2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\user\STM32CubeIDE\workspace_1.6.1_2\sx1276_L152RE_2\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sx1276_L152RE_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: sx1276_L152RE_2.elf
+ 
+arm-none-eabi-objdump -h -S  sx1276_L152RE_2.elf  > "sx1276_L152RE_2.list"
+arm-none-eabi-objcopy  -O binary  sx1276_L152RE_2.elf  "sx1276_L152RE_2.bin"
+arm-none-eabi-size   sx1276_L152RE_2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  41540	    180	   6764	  48484	   bd64	sx1276_L152RE_2.elf
+Finished building: default.size.stdout
+ 
+Finished building: sx1276_L152RE_2.bin
+ 
+Finished building: sx1276_L152RE_2.list
+ 
+15:19:43 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+../app/rf_test.c: In function 'UART_Tx':
+../app/rf_test.c:394:37: warning: format '%lu' expects argument of type 'long unsigned int', but argument 6 has type 'int' [-Wformat=]
+  394 |   sprintf(str_to_send, "%s %lu %s %lu \n\r",  "Bits lost: ", data_Tx, "of", iparamCopy.pBER->len );
+      |                                   ~~^                                       ~~~~~~~~~~~~~~~~~~~~
+      |                                     |                                                      |
+      |                                     long unsigned int                                      int
+      |                                   %u
+../app/rf_test.c: In function 'Measurements':
+../app/rf_test.c:437:18: warning: assignment discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  437 |  iparamCopy.pBER = &berParamCopy;
+      |                  ^
+../app/rf_test.c:438:18: warning: assignment discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  438 |  iparamCopy.pPER = &perParamCopy;
+      |                  ^
+arm-none-eabi-gcc -o "sx1276_L152RE_2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\user\STM32CubeIDE\workspace_1.6.1_2\sx1276_L152RE_2\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sx1276_L152RE_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: sx1276_L152RE_2.elf
+ 
+arm-none-eabi-objdump -h -S  sx1276_L152RE_2.elf  > "sx1276_L152RE_2.list"
+arm-none-eabi-objcopy  -O binary  sx1276_L152RE_2.elf  "sx1276_L152RE_2.bin"
+arm-none-eabi-size   sx1276_L152RE_2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  41552	    180	   6780	  48512	   bd80	sx1276_L152RE_2.elf
+Finished building: default.size.stdout
+ 
+Finished building: sx1276_L152RE_2.bin
+ 
+Finished building: sx1276_L152RE_2.list
+ 
+15:25:31 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/freertos.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../app/rf_test.c: In function 'UART_Tx':
+../app/rf_test.c:394:37: warning: format '%lu' expects argument of type 'long unsigned int', but argument 6 has type 'int' [-Wformat=]
+  394 |   sprintf(str_to_send, "%s %lu %s %lu \n\r",  "Bits lost: ", data_Tx, "of", iparamCopy.pBER->len );
+      |                                   ~~^                                       ~~~~~~~~~~~~~~~~~~~~
+      |                                     |                                                      |
+      |                                     long unsigned int                                      int
+      |                                   %u
+../app/rf_test.c: In function 'Measurements':
+../app/rf_test.c:435:14: error: 'volatile struct PER_TX_s' has no member named 'NumberOfAverage'
+  435 |  perParamCopy.NumberOfAverage = param->pPER->NumberOfAverage;
+      |              ^
+../app/rf_test.c:435:44: error: 'struct PER_TX_s' has no member named 'NumberOfAverage'
+  435 |  perParamCopy.NumberOfAverage = param->pPER->NumberOfAverage;
+      |                                            ^~
+../app/rf_test.c:437:18: warning: assignment discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  437 |  iparamCopy.pBER = &berParamCopy;
+      |                  ^
+../app/rf_test.c:438:18: warning: assignment discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  438 |  iparamCopy.pPER = &perParamCopy;
+      |                  ^
+make: *** [app/subdir.mk:54: app/rf_test.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:26:22 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../app/rf_test.c: In function 'UART_Tx':
+../app/rf_test.c:394:37: warning: format '%lu' expects argument of type 'long unsigned int', but argument 6 has type 'int' [-Wformat=]
+  394 |   sprintf(str_to_send, "%s %lu %s %lu \n\r",  "Bits lost: ", data_Tx, "of", iparamCopy.pBER->len );
+      |                                   ~~^                                       ~~~~~~~~~~~~~~~~~~~~
+      |                                     |                                                      |
+      |                                     long unsigned int                                      int
+      |                                   %u
+../app/rf_test.c: In function 'Measurements':
+../app/rf_test.c:437:18: warning: assignment discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  437 |  iparamCopy.pBER = &berParamCopy;
+      |                  ^
+../app/rf_test.c:438:18: warning: assignment discards 'volatile' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  438 |  iparamCopy.pPER = &perParamCopy;
+      |                  ^
+arm-none-eabi-gcc -o "sx1276_L152RE_2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\user\STM32CubeIDE\workspace_1.6.1_2\sx1276_L152RE_2\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sx1276_L152RE_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: sx1276_L152RE_2.elf
+ 
+arm-none-eabi-objdump -h -S  sx1276_L152RE_2.elf  > "sx1276_L152RE_2.list"
+arm-none-eabi-objcopy  -O binary  sx1276_L152RE_2.elf  "sx1276_L152RE_2.bin"
+arm-none-eabi-size   sx1276_L152RE_2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  41576	    180	   6780	  48536	   bd98	sx1276_L152RE_2.elf
+Finished building: default.size.stdout
+ 
+Finished building: sx1276_L152RE_2.bin
+ 
+Finished building: sx1276_L152RE_2.list
+ 
+15:31:40 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "sx1276_L152RE_2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\user\STM32CubeIDE\workspace_1.6.1_2\sx1276_L152RE_2\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sx1276_L152RE_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: sx1276_L152RE_2.elf
+ 
+arm-none-eabi-objdump -h -S  sx1276_L152RE_2.elf  > "sx1276_L152RE_2.list"
+arm-none-eabi-objcopy  -O binary  sx1276_L152RE_2.elf  "sx1276_L152RE_2.bin"
+arm-none-eabi-size   sx1276_L152RE_2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  41576	    180	   6780	  48536	   bd98	sx1276_L152RE_2.elf
+Finished building: default.size.stdout
+ 
+Finished building: sx1276_L152RE_2.bin
+ 
+Finished building: sx1276_L152RE_2.list
+ 
+15:43:11 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+../app/rf_test.c: In function 'UART_Tx':
+../app/rf_test.c:394:37: warning: format '%lu' expects argument of type 'long unsigned int', but argument 6 has type 'int' [-Wformat=]
+  394 |   sprintf(str_to_send, "%s %lu %s %lu \n\r",  "Bits lost: ", data_Tx, "of", iparamCopy.pBER->len );
+      |                                   ~~^                                       ~~~~~~~~~~~~~~~~~~~~
+      |                                     |                                                      |
+      |                                     long unsigned int                                      int
+      |                                   %u
+arm-none-eabi-gcc -o "sx1276_L152RE_2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\user\STM32CubeIDE\workspace_1.6.1_2\sx1276_L152RE_2\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sx1276_L152RE_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: sx1276_L152RE_2.elf
+ 
+arm-none-eabi-objdump -h -S  sx1276_L152RE_2.elf  > "sx1276_L152RE_2.list"
+arm-none-eabi-objcopy  -O binary  sx1276_L152RE_2.elf  "sx1276_L152RE_2.bin"
+arm-none-eabi-size   sx1276_L152RE_2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  41564	    180	   6780	  48524	   bd8c	sx1276_L152RE_2.elf
+Finished building: default.size.stdout
+ 
+Finished building: sx1276_L152RE_2.bin
+ 
+Finished building: sx1276_L152RE_2.list
+ 
+15:44:35 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "sx1276_L152RE_2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\user\STM32CubeIDE\workspace_1.6.1_2\sx1276_L152RE_2\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sx1276_L152RE_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: sx1276_L152RE_2.elf
+ 
+arm-none-eabi-objdump -h -S  sx1276_L152RE_2.elf  > "sx1276_L152RE_2.list"
+arm-none-eabi-objcopy  -O binary  sx1276_L152RE_2.elf  "sx1276_L152RE_2.bin"
+arm-none-eabi-size   sx1276_L152RE_2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  41564	    180	   6780	  48524	   bd8c	sx1276_L152RE_2.elf
+Finished building: default.size.stdout
+ 
+Finished building: sx1276_L152RE_2.bin
+ 
+Finished building: sx1276_L152RE_2.list
+ 
+18:09:23 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+arm-none-eabi-gcc "../Core/Src/freertos.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/freertos.d" -MT"Core/Src/freertos.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/freertos.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/main.o"
+../app/rf_test.c: In function 'OnRxDone':
+../app/rf_test.c:313:15: error: invalid use of undefined type 'struct InputParametrsTX_s'
+  313 | if( iparamCopy.mode == PER ) {
+      |               ^
+../app/rf_test.c:321:28: error: invalid use of undefined type 'struct InputParametrsTX_s'
+  321 |     if ( dTick > iparamCopy.pPER->AverageTime ) {
+      |                            ^
+../app/rf_test.c:323:77: error: invalid use of undefined type 'struct InputParametrsTX_s'
+  323 |       if ( !( ( *( uint32_t* )data_UART == 0 ) && ( prevSend == ( iparamCopy.pPER->NumberOfPacketSent - 1 ) ) ) ) {
+      |                                                                             ^
+../app/rf_test.c:324:32: error: invalid use of undefined type 'struct InputParametrsTX_s'
+  324 |           Error += ( iparamCopy.pPER->NumberOfPacketSent - prevSend ) - 1; /* если произошла потеря и начался следующий период передачи
+      |                                ^
+../app/rf_test.c:346:20: error: invalid use of undefined type 'struct InputParametrsTX_s'
+  346 | else if( iparamCopy.mode == BER ) {
+      |                    ^
+../app/rf_test.c:352:77: error: invalid use of undefined type 'struct InputParametrsTX_s'
+  352 |     while( ( ( StandartSeq = &BarkerSeq[i++] )->SequenceSize ) != iparamCopy.pBER->len ); /* ищем нужную эталонную последовательность */
+      |                                                                             ^
+../app/rf_test.c:354:26: error: invalid use of undefined type 'struct InputParametrsTX_s'
+  354 |     while( i < iparamCopy.pBER->len ){
+      |                          ^
+../app/rf_test.c: In function 'UART_Tx':
+../app/rf_test.c:391:16: error: invalid use of undefined type 'struct InputParametrsTX_s'
+  391 |  if( iparamCopy.mode == BER ) {
+      |                ^
+../app/rf_test.c:392:87: error: invalid use of undefined type 'struct InputParametrsTX_s'
+  392 |   sprintf(str_to_send, "%s %lu %s %lu \n\r",  "Bits lost: ", data_Tx, "of", iparamCopy.pBER->len );
+      |                                                                                       ^
+../app/rf_test.c:395:21: error: invalid use of undefined type 'struct InputParametrsTX_s'
+  395 |  else if( iparamCopy.mode == PER) {
+      |                     ^
+../app/rf_test.c:396:89: error: invalid use of undefined type 'struct InputParametrsTX_s'
+  396 |   sprintf(str_to_send, "%s %lu %s %u \n\r",  "Packets lost: ", data_Tx, "of", iparamCopy.pPER->NumberOfPacketSent);
+      |                                                                                         ^
+../app/rf_test.c: In function 'Measurements':
+../app/rf_test.c:431:12: error: invalid use of undefined type 'struct InputParametrsTX_s'
+  431 |  iparamCopy.mode = param->mode;
+      |            ^
+../app/rf_test.c:432:14: error: invalid use of undefined type 'struct BER_TX_s'
+  432 |  berParamCopy.len = param->pBER->len;
+      |              ^
+../app/rf_test.c:433:14: error: invalid use of undefined type 'struct PER_TX_s'
+  433 |  perParamCopy.AverageTime = param->pPER->AverageTime;
+      |              ^
+../app/rf_test.c:434:14: error: invalid use of undefined type 'struct PER_TX_s'
+  434 |  perParamCopy.NumberOfPacketSent = param->pPER->NumberOfPacketSent;
+      |              ^
+../app/rf_test.c:435:12: error: invalid use of undefined type 'struct InputParametrsTX_s'
+  435 |  iparamCopy.pBER = &berParamCopy;
+      |            ^
+../app/rf_test.c:436:12: error: invalid use of undefined type 'struct InputParametrsTX_s'
+  436 |  iparamCopy.pPER = &perParamCopy;
+      |            ^
+../app/rf_test.c:437:21: error: invalid use of undefined type 'struct InputParametrsTX_s'
+  437 |  switch ( iparamCopy.mode ) {
+      |                     ^
+../app/rf_test.c:439:18: error: invalid use of undefined type 'struct InputParametrsTX_s'
+  439 |   if ( iparamCopy.pBER != NULL ) InitRf( false );
+      |                  ^
+../app/rf_test.c:443:18: error: invalid use of undefined type 'struct InputParametrsTX_s'
+  443 |   if ( iparamCopy.pPER != NULL ) {
+      |                  ^
+../app/rf_test.c: At top level:
+../app/rf_test.c:46:27: error: storage size of 'iparamCopy' isn't known
+   46 | struct InputParametrsTX_s iparamCopy;
+      |                           ^~~~~~~~~~
+../app/rf_test.c:47:17: error: storage size of 'berParamCopy' isn't known
+   47 | struct BER_TX_s berParamCopy;
+      |                 ^~~~~~~~~~~~
+../app/rf_test.c:48:17: error: storage size of 'perParamCopy' isn't known
+   48 | struct PER_TX_s perParamCopy;
+      |                 ^~~~~~~~~~~~
+make: *** [app/subdir.mk:54: app/rf_test.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+18:11:01 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+../app/rf_test.c: In function 'OnRxDone':
+../app/rf_test.c:313:15: error: invalid use of undefined type 'struct InputParametrsTX_s'
+  313 | if( iparamCopy.mode == PER ) {
+      |               ^
+../app/rf_test.c:321:28: error: invalid use of undefined type 'struct InputParametrsTX_s'
+  321 |     if ( dTick > iparamCopy.pPER->AverageTime ) {
+      |                            ^
+../app/rf_test.c:323:77: error: invalid use of undefined type 'struct InputParametrsTX_s'
+  323 |       if ( !( ( *( uint32_t* )data_UART == 0 ) && ( prevSend == ( iparamCopy.pPER->NumberOfPacketSent - 1 ) ) ) ) {
+      |                                                                             ^
+../app/rf_test.c:324:32: error: invalid use of undefined type 'struct InputParametrsTX_s'
+  324 |           Error += ( iparamCopy.pPER->NumberOfPacketSent - prevSend ) - 1; /* если произошла потеря и начался следующий период передачи
+      |                                ^
+../app/rf_test.c:346:20: error: invalid use of undefined type 'struct InputParametrsTX_s'
+  346 | else if( iparamCopy.mode == BER ) {
+      |                    ^
+../app/rf_test.c:352:77: error: invalid use of undefined type 'struct InputParametrsTX_s'
+  352 |     while( ( ( StandartSeq = &BarkerSeq[i++] )->SequenceSize ) != iparamCopy.pBER->len ); /* ищем нужную эталонную последовательность */
+      |                                                                             ^
+../app/rf_test.c:354:26: error: invalid use of undefined type 'struct InputParametrsTX_s'
+  354 |     while( i < iparamCopy.pBER->len ){
+      |                          ^
+../app/rf_test.c: In function 'UART_Tx':
+../app/rf_test.c:391:16: error: invalid use of undefined type 'struct InputParametrsTX_s'
+  391 |  if( iparamCopy.mode == BER ) {
+      |                ^
+../app/rf_test.c:392:87: error: invalid use of undefined type 'struct InputParametrsTX_s'
+  392 |   sprintf(str_to_send, "%s %lu %s %lu \n\r",  "Bits lost: ", data_Tx, "of", iparamCopy.pBER->len );
+      |                                                                                       ^
+../app/rf_test.c:395:21: error: invalid use of undefined type 'struct InputParametrsTX_s'
+  395 |  else if( iparamCopy.mode == PER) {
+      |                     ^
+../app/rf_test.c:396:89: error: invalid use of undefined type 'struct InputParametrsTX_s'
+  396 |   sprintf(str_to_send, "%s %lu %s %u \n\r",  "Packets lost: ", data_Tx, "of", iparamCopy.pPER->NumberOfPacketSent);
+      |                                                                                         ^
+../app/rf_test.c: In function 'Measurements':
+../app/rf_test.c:431:12: error: invalid use of undefined type 'struct InputParametrsTX_s'
+  431 |  iparamCopy.mode = param->mode;
+      |            ^
+../app/rf_test.c:432:14: error: invalid use of undefined type 'struct BER_TX_s'
+  432 |  berParamCopy.len = param->pBER->len;
+      |              ^
+../app/rf_test.c:433:14: error: invalid use of undefined type 'struct PER_TX_s'
+  433 |  perParamCopy.AverageTime = param->pPER->AverageTime;
+      |              ^
+../app/rf_test.c:434:14: error: invalid use of undefined type 'struct PER_TX_s'
+  434 |  perParamCopy.NumberOfPacketSent = param->pPER->NumberOfPacketSent;
+      |              ^
+../app/rf_test.c:435:12: error: invalid use of undefined type 'struct InputParametrsTX_s'
+  435 |  iparamCopy.pBER = &berParamCopy;
+      |            ^
+../app/rf_test.c:436:12: error: invalid use of undefined type 'struct InputParametrsTX_s'
+  436 |  iparamCopy.pPER = &perParamCopy;
+      |            ^
+../app/rf_test.c:437:21: error: invalid use of undefined type 'struct InputParametrsTX_s'
+  437 |  switch ( iparamCopy.mode ) {
+      |                     ^
+../app/rf_test.c:439:18: error: invalid use of undefined type 'struct InputParametrsTX_s'
+  439 |   if ( iparamCopy.pBER != NULL ) InitRf( false );
+      |                  ^
+../app/rf_test.c:443:18: error: invalid use of undefined type 'struct InputParametrsTX_s'
+  443 |   if ( iparamCopy.pPER != NULL ) {
+      |                  ^
+../app/rf_test.c: At top level:
+../app/rf_test.c:46:27: error: storage size of 'iparamCopy' isn't known
+   46 | struct InputParametrsTX_s iparamCopy;
+      |                           ^~~~~~~~~~
+../app/rf_test.c:47:17: error: storage size of 'berParamCopy' isn't known
+   47 | struct BER_TX_s berParamCopy;
+      |                 ^~~~~~~~~~~~
+../app/rf_test.c:48:17: error: storage size of 'perParamCopy' isn't known
+   48 | struct PER_TX_s perParamCopy;
+      |                 ^~~~~~~~~~~~
+make: *** [app/subdir.mk:54: app/rf_test.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+18:11:44 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+../app/rf_test.c: In function 'UART_Tx':
+../app/rf_test.c:392:37: warning: format '%lu' expects argument of type 'long unsigned int', but argument 6 has type 'int' [-Wformat=]
+  392 |   sprintf(str_to_send, "%s %lu %s %lu \n\r",  "Bits lost: ", data_Tx, "of", iparamCopy.pBER->len );
+      |                                   ~~^                                       ~~~~~~~~~~~~~~~~~~~~
+      |                                     |                                                      |
+      |                                     long unsigned int                                      int
+      |                                   %u
+arm-none-eabi-gcc -o "sx1276_L152RE_2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\user\STM32CubeIDE\workspace_1.6.1_2\sx1276_L152RE_2\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sx1276_L152RE_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: sx1276_L152RE_2.elf
+ 
+arm-none-eabi-objdump -h -S  sx1276_L152RE_2.elf  > "sx1276_L152RE_2.list"
+arm-none-eabi-objcopy  -O binary  sx1276_L152RE_2.elf  "sx1276_L152RE_2.bin"
+arm-none-eabi-size   sx1276_L152RE_2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  41564	    180	   6780	  48524	   bd8c	sx1276_L152RE_2.elf
+Finished building: default.size.stdout
+ 
+Finished building: sx1276_L152RE_2.bin
+ 
+Finished building: sx1276_L152RE_2.list
+ 
+18:12:05 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+make -j8 all 
+arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
+arm-none-eabi-gcc -o "sx1276_L152RE_2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\user\STM32CubeIDE\workspace_1.6.1_2\sx1276_L152RE_2\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sx1276_L152RE_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: sx1276_L152RE_2.elf
+ 
+arm-none-eabi-objdump -h -S  sx1276_L152RE_2.elf  > "sx1276_L152RE_2.list"
+arm-none-eabi-objcopy  -O binary  sx1276_L152RE_2.elf  "sx1276_L152RE_2.bin"
+arm-none-eabi-size   sx1276_L152RE_2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  41560	    180	   6780	  48520	   bd88	sx1276_L152RE_2.elf
+Finished building: default.size.stdout
+ 
+Finished building: sx1276_L152RE_2.bin
+ 
+Finished building: sx1276_L152RE_2.list
+ 

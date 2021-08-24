@@ -1,4 +1,4 @@
-18:52:18 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
+18:12:05 **** Incremental Build of configuration Debug for project sx1276_L152RE_2 ****
 make -j8 all 
 arm-none-eabi-gcc "../app/rf_test.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L152xE -c -I../Core/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc -I../Drivers/STM32L1xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L1xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio" -I"C:/Users/user/STM32CubeIDE/workspace_1.6.1_2/sx1276_L152RE_2/app/LoRaMac-node/src/radio/sx1276" -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM3 -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"app/rf_test.d" -MT"app/rf_test.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "app/rf_test.o"
 arm-none-eabi-gcc -o "sx1276_L152RE_2.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\user\STM32CubeIDE\workspace_1.6.1_2\sx1276_L152RE_2\STM32L152RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="sx1276_L152RE_2.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
@@ -8,7 +8,7 @@ arm-none-eabi-objdump -h -S  sx1276_L152RE_2.elf  > "sx1276_L152RE_2.list"
 arm-none-eabi-objcopy  -O binary  sx1276_L152RE_2.elf  "sx1276_L152RE_2.bin"
 arm-none-eabi-size   sx1276_L152RE_2.elf 
    text	   data	    bss	    dec	    hex	filename
-  41064	    180	   6740	  47984	   bb70	sx1276_L152RE_2.elf
+  41560	    180	   6780	  48520	   bd88	sx1276_L152RE_2.elf
 Finished building: default.size.stdout
  
 Finished building: sx1276_L152RE_2.bin
@@ -16,5 +16,5 @@ Finished building: sx1276_L152RE_2.bin
 Finished building: sx1276_L152RE_2.list
  
 
-18:52:20 Build Finished. 0 errors, 0 warnings. (took 2s.139ms)
+18:12:07 Build Finished. 0 errors, 0 warnings. (took 1s.969ms)
 

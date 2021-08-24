@@ -97,15 +97,13 @@
 
 #endif
 
-#define BER_TEST
-
-#ifdef BER_TEST
-
 // какая последовательность Баркера используется
 #define USED_BARKER_SEQ	11
 
-// В этой инициализации радиоканала будет отключён подсчёт контрольной суммы
-void InitRfBer( void );
+#define NUMBER_OF_PACKETS_SENT 	20
+#define AVERAGE_TIME			620 // записывается по результатам расчета на передающей стороне
+
+// Общая функция которая запускает либо измерение PER либо BER
 
  typedef enum {
  	BARKER_2 = 2,
@@ -123,14 +121,28 @@ void InitRfBer( void );
      uint16_t Sequence;
  }BarkerSeq_t;
 
-#endif
+ struct BER_RX_s {
+ 	BarkerLen_t len;
+ };
 
-#ifdef PER_TEST
+ struct PER_RX_s {
+ 	int AverageTime;
+ 	int NumberOfPacketSent;
+ };
 
-#define NUMBER_OF_PACKETS_SENT 	20
-#define AVERAGE_TIME			620 // записывается по результатам расчета на передающей стороне
+ typedef enum {
+ 	BER			,
+ 	PER			,
+ 	PING_PONG	,
+ }Mode_t;
 
-#endif
+ struct InputParametrsRX_s {
+ 	struct BER_RX_s* pBER;
+ 	struct PER_RX_s* pPER;
+ 	Mode_t mode;
+ };
+
+ bool Measurements ( struct InputParametrsRX_s* param );
 
 void init_rf (void);
 void ping_pong_rf (void);

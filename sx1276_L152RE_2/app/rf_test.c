@@ -21,27 +21,14 @@ extern QueueHandle_t xQueueUartData;
 
 #endif
 
-#ifdef PER_TEST
-
-uint8_t data_UART[] = {0x00, 0x00, 0x00, 0x00};
-
 static char  str_to_send [128] = {0};
 
 static uint32_t prevSend = 0;
 static uint32_t prevTick = 0;
-
-extern QueueHandle_t xQueueUartData;
-
-#endif
-
-#ifdef BER_TEST
-
-static char  str_to_send [128] = {0};
-
+static uint32_t Error = 0;
 static uint16_t count = 0;
+uint8_t data_UART[] = {0x00, 0x00, 0x00, 0x00};
 
-static uint8_t data_UART[] = { 0 , 0 };
-static uint8_t error = 0;
 // последовательности Баркера которые будут использоваться при поиске ошибок
 
 BarkerSeq_t BarkerSeq[] =
@@ -56,8 +43,9 @@ BarkerSeq_t BarkerSeq[] =
   };
 
 extern QueueHandle_t xQueueUartData;
-
-#endif
+struct InputParametrsRX_s iparamCopy;
+struct BER_RX_s berParamCopy;
+struct PER_RX_s perParamCopy;
 
 const uint8_t PingMsg[] = "PING";
 const uint8_t PongMsg[] = "PONG";
@@ -83,7 +71,7 @@ extern Gpio_t Led1;
 extern Gpio_t Led2;
 extern UART_HandleTypeDef huart2;
 
-void init_rf (void)
+static void InitRf (bool crcOn)
 {
   // Target board initialization
   BoardInitMcu( );
@@ -119,67 +107,17 @@ void init_rf (void)
   Radio.SetTxConfig( MODEM_FSK, TX_OUTPUT_POWER, FSK_FDEV, 0,
                                 FSK_DATARATE, 0,
                                 FSK_PREAMBLE_LENGTH, FSK_FIX_LENGTH_PAYLOAD_ON,
-                                true, 0, 0, 0, 3000 );
+								crcOn, 0, 0, 0, 3000 );
 
   Radio.SetRxConfig( MODEM_FSK, FSK_BANDWIDTH, FSK_DATARATE,
                                 0, FSK_AFC_BANDWIDTH, FSK_PREAMBLE_LENGTH,
-                                0, FSK_FIX_LENGTH_PAYLOAD_ON, 0, true,
-                                0, 0,false, true );
+                                0, FSK_FIX_LENGTH_PAYLOAD_ON, 0, crcOn,
+                                0, 0, false, true );
 
   Radio.SetMaxPayloadLength( MODEM_FSK, BUFFER_SIZE );
 #endif
 
 }
-
-#ifdef BER_TEST
-
-void InitRfBer( void ) {
-	  // Target board initialization
-	  BoardInitMcu( );
-	  BoardInitPeriph( );
-
-	  // Radio initialization
-	  RadioEvents.TxDone = OnTxDone;
-	  RadioEvents.RxDone = OnRxDone;
-	  RadioEvents.TxTimeout = OnTxTimeout;
-	  RadioEvents.RxTimeout = OnRxTimeout;
-	  RadioEvents.RxError = OnRxError;
-
-	  Radio.Init( &RadioEvents );
-
-	  Radio.SetChannel( RF_FREQUENCY );
-
-#if defined( USE_MODEM_LORA )
-
-  Radio.SetTxConfig( MODEM_LORA, TX_OUTPUT_POWER, 0, LORA_BANDWIDTH,
-                                 LORA_SPREADING_FACTOR, LORA_CODINGRATE,
-                                 LORA_PREAMBLE_LENGTH, LORA_FIX_LENGTH_PAYLOAD_ON,
-                                 true, 0, 0, LORA_IQ_INVERSION_ON, 3000 );
-
-  Radio.SetRxConfig( MODEM_LORA, LORA_BANDWIDTH, LORA_SPREADING_FACTOR,
-                                 LORA_CODINGRATE, 0, LORA_PREAMBLE_LENGTH,
-                                 LORA_SYMBOL_TIMEOUT, LORA_FIX_LENGTH_PAYLOAD_ON,
-                                 0, true, 0, 0, LORA_IQ_INVERSION_ON, true );
-
-  Radio.SetMaxPayloadLength( MODEM_LORA, BUFFER_SIZE );
-
-#elif defined( USE_MODEM_FSK )
-
-  Radio.SetTxConfig( MODEM_FSK, TX_OUTPUT_POWER, FSK_FDEV, 0,
-                                FSK_DATARATE, 0,
-                                FSK_PREAMBLE_LENGTH, FSK_FIX_LENGTH_PAYLOAD_ON,
-                                false, 0, 0, 0, 3000 );
-
-  Radio.SetRxConfig( MODEM_FSK, FSK_BANDWIDTH, FSK_DATARATE,
-                                0, FSK_AFC_BANDWIDTH, FSK_PREAMBLE_LENGTH,
-                                0, FSK_FIX_LENGTH_PAYLOAD_ON, 0, false,
-                                0, 0,false, true );
-
-  Radio.SetMaxPayloadLength( MODEM_FSK, BUFFER_SIZE );
-#endif
-}
-
-#endif
 
 #ifdef RTC_TEST
 TimerEvent_t rtc_tim_1 = {0};
@@ -198,10 +136,9 @@ void rtc_tim_1_callback (void)
 
 void ping_pong_rf (void)
 {
-//  RtcInit();
   bool isMaster = false;
   uint8_t i;
-  init_rf( );
+  InitRf( true );
 #ifdef RTC_TEST
   TimerInit( &rtc_tim_1, rtc_tim_1_callback );
   TimerStop(&rtc_tim_1);
@@ -308,8 +245,6 @@ void ping_pong_rf (void)
              State = LOWPOWER;
              break;
          case RX_TIMEOUT:
-//	     State = RX;
-//	     break;
          case RX_ERROR:
              if( isMaster == true )
              {
@@ -359,11 +294,8 @@ void OnTxDone( void )
 
 void OnRxDone( uint8_t *payload, uint16_t size, int16_t rssi, int8_t snr )
 {
-#ifdef PER_TEST
-	static uint32_t Error;
 	uint32_t Tick = HAL_GetTick();
 	uint32_t dTick = 0;
-#endif
 	HAL_GPIO_TogglePin(LED_EXT_GPIO_Port, LED_EXT_Pin);
 	Radio.Sleep( );
     BufferSize = size;
@@ -377,9 +309,8 @@ void OnRxDone( uint8_t *payload, uint16_t size, int16_t rssi, int8_t snr )
     	printf( "Failed to post the message" );
     }
 #endif
-
-#ifdef PER_TEST
     memcpy( data_UART, payload, sizeof(data_UART) );
+if( iparamCopy.mode == PER ) {
     if ( !prevTick ) {
     	prevTick = Tick;  /* фиксируем время начала приёма */
     }
@@ -387,10 +318,10 @@ void OnRxDone( uint8_t *payload, uint16_t size, int16_t rssi, int8_t snr )
     	dTick = Tick - prevTick; // находим разницу времени между двумя принятыми посылками
     	prevTick = Tick;
     }
-    if ( dTick > AVERAGE_TIME ) {
+    if ( dTick > iparamCopy.pPER->AverageTime ) {
     	if ( *( uint32_t* )data_UART < prevSend ) {
-    		if ( !( ( *( uint32_t* )data_UART == 0 ) && ( prevSend == ( NUMBER_OF_PACKETS_SENT - 1 ) ) ) ) {
-        		Error += (NUMBER_OF_PACKETS_SENT - prevSend) - 1;	/* если произошла потеря и начался следующий период передачи
+    		if ( !( ( *( uint32_t* )data_UART == 0 ) && ( prevSend == ( iparamCopy.pPER->NumberOfPacketSent - 1 ) ) ) ) {
+        		Error += ( iparamCopy.pPER->NumberOfPacketSent - prevSend ) - 1;	/* если произошла потеря и начался следующий период передачи
         		то находим сколько пакетов было потеряно между концом предыдущего периода и началом следующего
         		Отнимаем один потому что считаем от 0
         	 */
@@ -403,7 +334,7 @@ void OnRxDone( uint8_t *payload, uint16_t size, int16_t rssi, int8_t snr )
 
         if ( *( uint32_t* )data_UART < prevSend ) {
         	Error = *( uint32_t* )data_UART; /* если с начала приёма следующего периода были потеряны
-        	пакеты то находим их количество*/
+        	пакеты то находим их количество ( тут происходит обнуление )*/
         }
     }
     else {
@@ -411,28 +342,24 @@ void OnRxDone( uint8_t *payload, uint16_t size, int16_t rssi, int8_t snr )
     	находим число потерянных пакетов, если такие есть*/
     }
     prevSend = *( uint32_t* )data_UART;
-#endif
-
-#ifdef BER_TEST
-    memcpy( data_UART, payload, sizeof(data_UART)/sizeof(uint8_t) );
+}
+else if( iparamCopy.mode == BER ) {
     count++;
     uint16_t rxSeq = *( uint16_t* )data_UART;
     BarkerSeq_t* StandartSeq;
     int i = 0;
 
-    while( ( ( StandartSeq = &BarkerSeq[i++] )->SequenceSize ) != USED_BARKER_SEQ ); /* ищем нужную эталонную последовательность */
+    while( ( ( StandartSeq = &BarkerSeq[i++] )->SequenceSize ) != iparamCopy.pBER->len ); /* ищем нужную эталонную последовательность */
     i = 0;
-    while( i < USED_BARKER_SEQ ){
-    	error += ( rxSeq & ( 0x0001 << i ) ) ^ ( ( StandartSeq->Sequence ) & ( 0x0001 << i ) ); /* считаем количество несоответствующих битов*/
+    while( i < iparamCopy.pBER->len ){
+    	Error += ( ( rxSeq & ( 0x0001 << i ) ) ^ ( ( StandartSeq->Sequence ) & ( 0x0001 << i ) ) ) >> i; /* считаем количество несоответствующих битов*/
     	i++;
     }
 // передаём в очередь для вывод на экран
-    if( count == 1000 ) {
-        if ( xQueueSendToBackFromISR( xQueueUartData,  &error, pdFALSE ) != pdPASS) {
+        if ( xQueueSendToBackFromISR( xQueueUartData,  &Error, pdFALSE ) != pdPASS) {
         	printf( "Failed to post the message" );
         }
-    }
-#endif
+}
 }
 
 void OnTxTimeout( void )
@@ -456,29 +383,20 @@ void OnRxError( void )
 }
 
 void UART_Tx( void ) {
-#ifdef BER_TEST
-	uint8_t data_Tx;
 	if ( !uxQueueMessagesWaitingFromISR(xQueueUartData) ) {
-		return;
+			return;
 	}
-	xQueueReceiveFromISR( xQueueUartData, &data_Tx, pdFALSE );
-	sprintf(str_to_send, "%s %u %s %u \n\r",  "Bits lost: ", data_Tx, "of", USED_BARKER_SEQ * count);
-	HAL_UART_Transmit(&huart2, (uint8_t*)str_to_send, strlen(str_to_send), 10);
-	count = 0;
-	error = 0;
-	xQueueReset( xQueueUartData );
-#endif
-
-#ifdef PER_TEST
 	uint32_t data_Tx;
-	if ( !uxQueueMessagesWaitingFromISR(xQueueUartData) ) {
-		return;
-	}
 	xQueueReceiveFromISR( xQueueUartData, &data_Tx, pdFALSE );
-	sprintf(str_to_send, "%s %lu %s %u \n\r",  "Packets lost: ", data_Tx, "of", NUMBER_OF_PACKETS_SENT);
+	if( iparamCopy.mode == BER ) {
+		sprintf(str_to_send, "%s %lu %s %d \n\r",  "Bits lost: ", data_Tx, "of", iparamCopy.pBER->len );
+		Error = 0;
+	}
+	else if( iparamCopy.mode == PER) {
+		sprintf(str_to_send, "%s %lu %s %u \n\r",  "Packets lost: ", data_Tx, "of", iparamCopy.pPER->NumberOfPacketSent);
+	}
 	HAL_UART_Transmit(&huart2, (uint8_t*)str_to_send, strlen(str_to_send), 10);
 	xQueueReset( xQueueUartData );
-#endif
 
 #ifdef UART_TEST
 	/* Это если понадобится выводить принятые данные в терминал, но сначала надо подправить колбэк
@@ -509,6 +427,30 @@ void Radio_Rx( void ) {
 	  }
 }
 
+bool Measurements ( struct InputParametrsRX_s* param ) {
+	iparamCopy.mode = param->mode;
+	berParamCopy.len = param->pBER->len;
+	perParamCopy.AverageTime = param->pPER->AverageTime;
+	perParamCopy.NumberOfPacketSent = param->pPER->NumberOfPacketSent;
+	iparamCopy.pBER = &berParamCopy;
+	iparamCopy.pPER = &perParamCopy;
+	switch ( iparamCopy.mode ) {
+	case BER:
+		if ( iparamCopy.pBER != NULL ) InitRf( false );
+		else return false;
+	break;
+	case PER:
+		if ( iparamCopy.pPER != NULL ) {
+			count = 0;
+			InitRf( true );
+		}
+		else return false;
+	break;
+	default:
+	break;
+	}
+	return true;
+}
 
 
 
